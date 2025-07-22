@@ -1,8 +1,13 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: black;
+  --foreground: #fff;
+
+  /* --hero-header-height: 316px; // for small devices */
+
+  --diagonal-gradient: linear-gradient(to bottom right, #963488 0%, #FC6F32 50%, #FF4A59 100%);
 }
 
 @theme inline {
@@ -12,13 +17,27 @@
   --font-metrophobic: var(--font-metrophobic);
   --font-inter: var(--font-inter);
   --font-spaceGrotesk: var(--font-spaceGrotesk);
+
+  --color-diagonal-gradient: var(--diagonal-gradient)
+
+  --breakpoint-3xl: 1920px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* styles.css */
+@import "tailwindcss";
+
+@theme {
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-padding: 1rem;
+  --container-padding-sm: 2rem;
+  --container-padding-lg: 4rem;
+}
+
+.container {
+  @apply container 2xl:max-w-[1920px] mx-auto;
 }
 
 body {
@@ -27,8 +46,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: white;
+  z-index: -2;
+  border-radius: 91px;
+  background: var(--diagonal-gradient);
+}
+
+.gradient-border {
+  @apply m-0.5 relative
 }
