@@ -60,7 +60,7 @@ export default function Home() {
     <div
       ref={ref}
       className="h-screen snap-y overflow-auto snap-mandatory md:text-xl 2xl:text-2xl font-inter relative">
-      <BackgroundParallax backgroundY={backgroundY} />
+      <BackgroundParallax scrollY={scrollY} backgroundY={backgroundY} />
 
       <div className="h-52 md:h-[316px] snap-center relative z-10 container">
         <div className="sticky top-8 w-full font-medium text-lg flex justify-center gap-2 md:gap-12 flex-wrap">
