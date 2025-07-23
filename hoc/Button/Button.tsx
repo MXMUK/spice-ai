@@ -24,10 +24,10 @@ const Button: FC<React.PropsWithChildren<Props>> = ({
   ...otherProps
 }) => {
   const rootClassName = clsx(
-    'flex justify-center items-center cursor-pointer rounded-[91px] hover:bg-white/5 transition-colors',
+    'flex justify-center items-center cursor-pointer rounded-[91px] hover:bg-white/5 transition-colors duration-[.3s]',
     className,
     {
-      'bg-transparent': variant === 'default',
+      'bg-transparent bg-gradient-to-br hover:from-[#963488] hover:via-[#FC6F32] hover:to-[#fff] from-[#fff] via-[#fff] to-[#fff] text-transparent bg-clip-text': variant === 'default',
       'bg-[var(--background)] gradient-border': variant === 'gradientBorder',
       'opacity-50 cursor-not-allowed': disable,
     }
