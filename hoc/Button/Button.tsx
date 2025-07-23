@@ -27,8 +27,8 @@ const Button: FC<React.PropsWithChildren<Props>> = ({
     'flex justify-center items-center cursor-pointer rounded-[91px] hover:bg-white/5 transition-colors',
     className,
     {
-      'bg-transparent py-4 px-6': variant === 'default',
-      'bg-[var(--background)] py-2.5 px-5 gradient-border': variant === 'gradientBorder',
+      'bg-transparent': variant === 'default',
+      'bg-[var(--background)] gradient-border': variant === 'gradientBorder',
       'opacity-50 cursor-not-allowed': disable,
     }
   );

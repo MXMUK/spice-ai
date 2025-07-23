@@ -5,8 +5,6 @@
   --background: black;
   --foreground: #fff;
 
-  /* --hero-header-height: 316px; // for small devices */
-
   --diagonal-gradient: linear-gradient(to bottom right, #963488 0%, #FC6F32 50%, #FF4A59 100%);
 }
 
@@ -19,8 +17,6 @@
   --font-spaceGrotesk: var(--font-spaceGrotesk);
 
   --color-diagonal-gradient: var(--diagonal-gradient)
-
-  --breakpoint-3xl: 1920px;
 }
 
 /* styles.css */
@@ -37,7 +33,7 @@
 }
 
 .container {
-  @apply container 2xl:max-w-[1920px] mx-auto;
+  @apply container 2xl:max-w-[1920px] mx-auto px-4 2xl:px-20 xl:px-16 lg:px-12 md:px-8;
 }
 
 body {
